@@ -12,6 +12,9 @@ add_action('wp_enqueue_scripts', 'loadFiles');
 
 function enableFeatures() {
     add_theme_support('title-tag'); // enables the title tag per page
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerLocation1', 'Footer Location 1');
+    register_nav_menu('footerLocation2', 'Footer Location 2');
 }
 
 add_action('after_setup_theme', 'enableFeatures');
